@@ -285,6 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .welcome__photo {
     max-width: 500px;
+    height: fit-content;
     border-radius: 50px;
     border: 3px solid lightskyblue;
 }
@@ -419,7 +420,7 @@ text-align: center;
                         /* Footer */
 
 .footer {
-    padding: 100px 0;
+    padding: 100px 20px;
 }
 
 .footer__inner {
@@ -491,7 +492,52 @@ text-align: center;
 }
 
 @media (max-width: 1200px) {
+
+                 /* Countainer */
+
     .container {
         max-width: 1100px;
+    }
+
+                    /* Intro */
+
+    .intro__title {
+        font-size: 120px;
+    }
+
+                        /* Work */
+
+    .work__suptitle {
+        padding: 0 20px;
+    }
+
+                    /* Statistic */
+
+    .stat__title {
+        font-size: 17px;
+    }
+
+    .stat__suptitle {
+        font-size: 13px;
+    }
+
+                    /* Welcome */
+    
+    .welcome__title {
+        font-size: 18px;
+    }
+
+    .welcome__text {
+        font-size: 16px;
+    }
+
+                    /* Footer */
+
+    .footer__text {
+        font-size: 15px;
+    }
+
+    .footer__title {
+        font-size: 20px;
     }
 }
