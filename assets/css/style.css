@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 85vh; /*100% of the visitor's screen*/
     padding: 80px 0;
     overflow: hidden;
+    min-height: 870px;
 
     background: url("../images/intro1.jpg") center no-repeat;
     background-size: cover;
@@ -144,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
                         /*Header*/
 
 .header {
-    padding: 20px 0;
+    padding: 10px 10px;
     width: 100%;
 
     position: absolute;
@@ -152,6 +153,21 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     z-index: 1000;
+}
+
+.header.fixed {
+    background-color: b7e1fa;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    transform: translate3d(0, 0, 0);
+}
+
+.header.active {
+    background-color: b7e1fa;
 }
 
 .header__inner {
@@ -186,6 +202,73 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__link:hover {
     color: EBF4F6;  
+}
+
+                    /* Burger */
+
+.burger {
+    position: absolute;
+    display: none;
+    top: 16px;
+    right: 35px;
+    z-index: 1;
+
+    padding: 10px 0;
+    width: 30px;  
+}
+
+.burger.active .burger__item{
+    background: none;
+}
+
+.burger__item {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: 3FA2F6;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    transition: background .2s linear;
+}
+
+.burger__item:before {
+    top: -8px;
+}
+
+.burger__item:after {
+    bottom: -8px;
+}
+
+.burger__item:before, .burger__item:after {
+    content: "";
+    height: 3px;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    background-color: 3FA2F6;
+
+    transition: transform .2s linear;
+}
+
+.burger.active .burger__item:before {
+    transform-origin: left top;
+    transform: rotate(45deg) translate3d(0px, -2px, 0);
+}
+
+.burger.active .burger__item:after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translate3d(0, 3px, 0);
 }
 
                         /*Work*/
@@ -726,9 +809,38 @@ text-align: center;
 
     .nav {
         display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: B7e1fa;
+    }
+
+    .nav__link {
+        display: block;
+        margin: 0;
+        padding: 8px 15px;
     }
 
                 /* Intro */
+
+    .intro {
+        min-height: 650px;
+    }
+
+                /* Header */
+
+    .header {
+        padding: 10px 10px;
+    }
+
+                /* Burger */
+
+    .burger {
+        display: block;
+    }
 
     .intro__title {
         font-size: 80px;
@@ -804,11 +916,11 @@ text-align: center;
 
     .intro__title {
         font-size: 55px;
-        top: 150px;
+        top: 120px;
     }
 
     .intro__Lower {
-        height: 111%;
+        height: 107%;
     }
 
     .intro__col--photo {
@@ -889,6 +1001,7 @@ text-align: center;
         padding: 5px 5px;
         margin: 0;
         margin-bottom: 5px;
+        font-size: 13px;
     }
 
                     /* Video */
