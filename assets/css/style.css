@@ -84,19 +84,19 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(3);
 }
 
-.intro__first {
-    margin-bottom: 80px;
-}
-
-.intro__second {
-    margin-bottom: 80px;
-}
-
                         /*Infos*/
 
 .infos {
     display: flex;
     position: absolute;
+}
+
+.infos__item--first {
+    margin-bottom: 80px;
+}
+
+.infos__item--second {
+    margin-bottom: 80px;
 }
 
 .infos__column1 {
@@ -117,6 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .infos__icon {
     width: 50px;
+    margin-bottom: 20px;
 }
 
 .infos__text {
@@ -262,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat__title {
-    padding: 15px;
+    padding: 15px 0;
     font-size: 20px;
     text-transform: uppercase;
     color: 3FA2F6;
@@ -281,10 +282,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .welcome {
     display: flex;
+    align-items: center;
 }
 
 .welcome__photo {
-    max-width: 500px;
+    max-width: 50%;
     height: fit-content;
     border-radius: 50px;
     border: 3px solid lightskyblue;
@@ -369,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .company__item {
-    width: 200px;
+    width: 20%;
 }
                     
                     /* Video */
@@ -421,6 +423,7 @@ text-align: center;
 
 .footer {
     padding: 100px 20px;
+    border-bottom: 1px solid deepskyblue;
 }
 
 .footer__inner {
@@ -491,6 +494,17 @@ text-align: center;
     align-items: center;
 }
 
+.footer__under {
+    color: deepskyblue;
+    font-weight: 200;
+    text-align: center;
+    padding: 10px;
+}
+
+
+                    /* MEDIA 1200PX */
+
+
 @media (max-width: 1200px) {
 
                  /* Countainer */
@@ -514,7 +528,7 @@ text-align: center;
                     /* Statistic */
 
     .stat__title {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .stat__suptitle {
@@ -524,20 +538,381 @@ text-align: center;
                     /* Welcome */
     
     .welcome__title {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .welcome__text {
         font-size: 16px;
     }
 
+                    /* Parallax */
+
+    .par__text {
+        font-size: 13px;
+    }
+
                     /* Footer */
 
     .footer__text {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .footer__title {
         font-size: 20px;
     }
 }
+
+                    /* MEDIA 990PX */
+
+@media (max-width: 990px) {
+
+                    /* Intro */
+
+    .intro__title {
+        font-size: 90px;
+        top: 100px;
+    }
+
+    .intro__Lower {
+        height: 80%;
+    }
+
+    .intro__col--photo {
+        height: 85%;
+    }
+
+                    /* Infos */
+
+    .infos__text {
+        display: none;
+    }
+
+    .infos__title {
+        font-size: 10px;
+    }
+
+    .infos__item--first, .infos__item--second {
+        margin-bottom: 250px;
+    }
+
+                    /* Work */
+    .work__item {
+        padding: 0 5px;
+    }
+
+    .work__photo {
+        max-width: 150px;
+    }
+
+    .work__title {
+        font-size: 20px;
+    }
+
+    .work__suptitle {
+        font-size: 13px;
+    }
+
+                 /* Statistic */
+            
+    .stat {
+        padding: 50px 0;
+    }
+
+    .stat__item {
+        padding: 0;
+    }
+    
+    .stat__icon {
+        width: 60px;
+    }
+
+    .stat__suptitle {
+        display: none;
+    }
+
+                    /* Welcome */
+
+
+    .welcome__title {
+        font-size: 15px;
+    }
+
+    .welcome__text {
+        font-size: 13px;
+    }
+
+    /* Section */
+    .section {
+        padding: 50px 0;
+    }
+
+    .section__header {
+        margin-bottom: 0;
+    }
+
+    /* Parallax */
+
+    .par__photo {
+        height: 150px;
+    }
+
+    .par__price {
+        font-size: 55px;
+    }
+
+    .par__text {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+
+                /* Video */
+
+    .video__header {
+        top: 50%;
+    }
+
+    .video__title {
+        font-size: 100px;
+    }
+
+                    /* Footer */
+
+.footer {
+    padding: 50px 20px;
+}
+
+.footer__inner {
+    display: block;
+}
+
+.footer__text {
+    display: none;
+}
+
+.footer__socials {
+    display: none;
+}
+
+.footer__contacts {
+    display: none;
+}
+
+.footer__info {
+    display: none;
+}
+
+.footer__album {
+    display: none;
+}
+}
+
+.footer__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    background-color: transparent;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
+}
+
+.footer__item--first, .footer__item--second, .footer__item--third, .footer__item--fourth {
+    width: 100%;
+}
+
+                /* MEDIA 700PX */
+
+@media (max-width: 700px) {
+
+                /* NAV */
+
+    .nav {
+        display: none;
+    }
+
+                /* Intro */
+
+    .intro__title {
+        font-size: 80px;
+    }
+
+    .intro__Lower {
+        height: 85%;
+    }
+
+    .intro__photo {
+        transform: scale(4);
+    }
+
+    .intro__col--photo {
+        height: 65%;
+    }
+
+                    /* Welcome */
+
+    .welcome__suptitle {
+        font-size: 13px;
+        padding: 20px 10px 5px;
+        font-weight: 400;
+    }
+
+    .welcome__title {
+        background-color: transparent;
+        color: 3FA2F6;
+        border: 1px solid deepskyblue;
+        font-weight: 500;
+    }
+
+
+    .welcome__text {
+        font-size: 0;
+    }
+
+    /* Statistic */
+
+    .stat__title {
+        font-size: 13px;
+    }
+
+                    /* Parralax */
+
+    .par__text {
+        display: none;
+    }
+
+    .par__item {
+        width: 25%;
+    }
+
+                    /* Button */
+
+    .btn {
+        padding: 10px 15px;
+    }
+
+}
+
+                /* MEDIA 575PX */
+
+                /* Header */
+    
+    .header__logo {
+        font-size: 20px;
+    }
+
+    @media (max-width: 575px) {
+
+        /* Intro */
+
+    .intro__title {
+        font-size: 55px;
+        top: 150px;
+    }
+
+    .intro__Lower {
+        height: 111%;
+    }
+
+    .intro__col--photo {
+        height: 40%;
+    }
+
+                    /* Infos */
+
+    .infos__title {
+        font-size: 10px;
+    }
+
+                    /* Work */
+
+    .work {
+        display: block;
+        border: 2px solid deepskyblue;
+        border-radius: 50px;
+        margin: 0 10px;
+    }
+
+    .work__item {
+        margin-bottom: 20px;
+    }
+
+    .work__item:first-child {
+        margin-top: 20px;
+    }
+
+                    /* Statistic */
+
+    .stat__title {
+        font-size: 9px;
+    }
+
+                    /* Welcome */
+
+    .wel {
+        padding: 40px 20px;
+    }
+
+    .welcome__suptitle {
+        font-size: 9px;
+    }
+
+    .welcome__title {
+        font-size: 11px;
+    }
+
+    .welcome__text {
+        padding: 5px 10px;
+    }
+
+                    /* Secrion */
+
+    .section {
+        padding: 30px 0;
+    }
+
+                    /* Parallax */
+
+    .par__inner {
+        padding-bottom: 50px;
+        margin: 0 20px;
+    }
+
+    .par__photo {
+        height: 100px;
+    }
+
+    .par__price {
+        font-size: 35px;
+    }
+
+                    /* Button */
+
+    .btn {
+        padding: 5px 5px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+                    /* Video */
+
+    .video__suptitle {
+        font-size: 20px;
+    }
+
+    .video__title {
+        font-size: 50px;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer__title {
+        font-size: 15px;
+    }
+
+    .footer__under {
+        font-size: 12px;
+    }
+
+    }
